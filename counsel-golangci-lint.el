@@ -38,7 +38,8 @@
 	      :caller 'counsel-golangci-lint)))
 
 (ivy-configure 'counsel-golangci-lint
-  :display-transformer-fn #'counsel-git-grep-transformer)
+  :display-transformer-fn #'counsel-git-grep-transformer
+  :unwind-fn #'swiper--cleanup)
 	    
 
 
