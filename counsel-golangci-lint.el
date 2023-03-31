@@ -11,7 +11,7 @@
 (defvar counsel-golangci-lint-history nil
   "History for `counsel-golangci-lint'.")
 
-(defvar counsel-golangci-lint-cmd "golangci-lint run --print-issued-lines=false --out-format=line-number ./..."
+(defvar counsel-golangci-lint-cmd "LOG_LEVEL=error golangci-lint run --print-issued-lines=false --out-format=line-number ./..."
   "Command for `counsel-golangci-lint'.")
 
 (defun counsel--go-root ()
