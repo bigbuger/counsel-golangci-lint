@@ -16,7 +16,7 @@
 
 (defun counsel--go-root ()
   "Find go mod root."
-  (expand-file-name (shell-command-to-string "dirname $(go env GOMOD)")))
+  (expand-file-name (string-replace "\n" "" (shell-command-to-string "dirname $(go env GOMOD)"))))
 
 (defun counsel-golangci-lint-cands ()
   "Call `golangci-lint'."
